@@ -4,4 +4,18 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include SetSource
   include SetPageDefaults
+
+  before_action :set_copyright
+
+  def set_copyright
+    @copyright = XViewTool::Renderer.copyright 'MarkX', 'All rights reserved'
+  end
+end
+
+module XViewTool
+  class Renderer
+    def self.copyright name, msg
+      "&copy #{Time.now.year} | #{name} #{msg}".html_safe
+    end
+  end
 end
