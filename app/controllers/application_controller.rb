@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 end
 
-module XxxViewTool
+module XViewTool
   class Renderer
     def self.copyright name, msg
       "&copy #{Time.now.year} | #{name} #{msg}".html_safe
