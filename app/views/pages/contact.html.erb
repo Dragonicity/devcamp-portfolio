@@ -1,5 +1,16 @@
-<h1>Pages#contact</h1>
-<p><%= number_to_phone "5555555555" %></p>
-<p><%= number_to_currency "150" %></p>
-<p><%= number_to_percentage "80.4" %></p>
-<p><%= number_with_delimiter "123849493828282" %></p>
+<div class="inner cover">
+  <h1 class="cover-heading">Contact Information</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <p class="lead">Phone: 888 8888 8888</p>
+      <p class="lead">Email: xxx@example.com</p>
+    </div>
+    <div class="col-md-6">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.085588474054!2d114.1555282515288!3d22.46341778516678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340408326ed0814b%3A0x568729dd335910a9!2s15+Hong+Lok+Yuen+15th+St%2C+Hong+Lok+Yuen!5e0!3m2!1sen!2shk!4v1505289167042" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <p class="lead">
+    <%= link_to "Learn More", about_me_path, class: "btn btn-lg btn-secondary" %>
+  </p>
+</div>
