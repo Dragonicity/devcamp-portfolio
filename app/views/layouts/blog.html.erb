@@ -6,20 +6,21 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
-
-
-   
+  <body> 
+    <%= render "shared/blog_nav" %>  
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">My Blog</h1>
+        <p class="lead blog-description">Blog for Web application development.</p>
+        <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
-
-        <%= render "shared/blog_nav" %>
         <%= yield %>
-
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
@@ -51,19 +52,7 @@
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
-
-
- <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-
-   
         <%= source_helper("blog") %>
-
-
       </div>
     </div>
   </body>
