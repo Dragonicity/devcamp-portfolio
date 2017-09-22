@@ -199,3 +199,16 @@ body {
   background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 20px;
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
