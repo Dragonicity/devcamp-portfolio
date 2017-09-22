@@ -17,6 +17,5 @@ class TopicsController < ApplicationController
   private
     def set_sidebar_topics
       @sidebar_topics = Topic.with_blogs
-      byebug
     end
 end
