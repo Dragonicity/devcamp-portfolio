@@ -7,4 +7,3 @@ test:
 production:
   adapter: redis
   url: r<%= ENV["REDISCLOUD_URL"] %>
-  channel_prefix: devcamp-portfolio_production
