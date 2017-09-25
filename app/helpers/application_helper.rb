@@ -34,6 +34,10 @@ module ApplicationHelper
         title: 'Contact'
       },
       {
+        url: retreat_path,
+        title: 'Retreat'
+      },
+      {
         url: blogs_path,
         title: 'Blog'
       },
